@@ -4,7 +4,8 @@
   width: 30px;
   border: 2px solid white;
   position: absolute;
-  transform: translateX(-50%);
+  transform: translateX(0%);
+  /* left: 50%; */
   bottom: 60px;
   border-radius: 50px;
   cursor: pointer;
