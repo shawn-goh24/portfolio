@@ -46,7 +46,11 @@ export default function Experience(props) {
           }}
         >
           <Typography
-            sx={{ fontWeight: "bold", fontSize: { xs: "16px", sm: "22px" } }}
+            sx={{
+              fontWeight: "bold",
+              fontSize: { xs: "16px", sm: "22px" },
+              textAlign: { xs: "center", sm: "left" },
+            }}
           >
             Test Development Engineer @{" "}
             <span style={{ color: "#64ABFF" }}>Dyson</span>
@@ -56,6 +60,7 @@ export default function Experience(props) {
               color: "#8d8d8d",
               mb: "15px",
               fontSize: { xs: "11px", sm: "16px" },
+              textAlign: { xs: "center", sm: "left" },
             }}
           >
             Sept 2020 - May 2023
