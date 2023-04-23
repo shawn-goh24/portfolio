@@ -58,7 +58,7 @@ export default function Navigation(props) {
               Welcome to my very first portfolio that I created myself. I'm
               Shawn from Singapore, and I spent around 2.5 years working for
               Dyson as a test development engineer. Only in 2021 I've begun to
-              get more intereted in coding due to my work, which is why I'm
+              get more interested in coding due to my work, which is why I'm
               currently enrolled in a full-stack development bootcamp by Rocket
               Academy.
             </Typography>
