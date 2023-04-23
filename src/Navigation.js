@@ -9,7 +9,6 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
-  Typography,
 } from "@mui/material";
 import logo from "./assets/logo.svg";
 import React, { useState } from "react";
@@ -37,11 +36,23 @@ export default function Navigation(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        Shawn
-      </Typography>
+      <img
+        src={logo}
+        alt="logo"
+        width="35px"
+        style={{
+          filter: "hue-rotate(86deg) brightness(118%) contrast(119%)",
+          margin: "15px 0px 8px 0px",
+        }}
+      />
       <Divider />
-      <List>
+      <List
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton
@@ -58,7 +69,12 @@ export default function Navigation(props) {
 
   return (
     <>
-      <Container className="navbar" sx={{ display: "flex" }}>
+      <Container
+        className="navbar"
+        sx={{
+          display: "flex",
+        }}
+      >
         <IconButton
           color="inherit"
           aria-label="open drawer"
@@ -101,16 +117,6 @@ export default function Navigation(props) {
             </li>
           </ul>
         </Box>
-        {/* {CustomButton} */}
-        <Button
-          variant="outlined"
-          onClick={() =>
-            window.open("https://www.linkedin.com/in/shawngoh/", "_blank")
-          }
-          size="small"
-        >
-          Linkedin
-        </Button>
       </Container>
       <Box component="nav">
         <Drawer
