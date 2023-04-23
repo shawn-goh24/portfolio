@@ -48,7 +48,10 @@ export default function Contact(props) {
           questions, or have possibilities for me. Please email me! I'll try to
           respond to you as soon as possible!
         </Typography>
-        <a href="mailto: shawn_gzl@hotmail.com">
+        <a
+          href="mailto: shawn_gzl@hotmail.com"
+          style={{ textDecoration: "none" }}
+        >
           <Button variant="outlined" sx={{ mt: "60px" }}>
             Say Hello!
           </Button>
