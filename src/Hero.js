@@ -58,8 +58,7 @@ export default function Hero(props) {
           </Typography>
         </Box>
         <Typography sx={{ fontSize: { xs: "18", sm: "24px" } }}>
-          Inspired <span style={{ color: "#64ABFF" }}>full-stack</span>{" "}
-          developer
+          <span style={{ color: "#64ABFF" }}>Full-stack</span> developer
         </Typography>
       </Box>
       <div

@@ -9,7 +9,9 @@ import {
 } from "@mui/material";
 import React from "react";
 import gowhere from "./assets/gowhere.png";
+import kaching from "./assets/kaching.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import LaunchIcon from "@mui/icons-material/Launch";
 
 export default function Projects(props) {
   return (
@@ -90,21 +92,34 @@ export default function Projects(props) {
             component="img"
             alt="gowhere"
             height="240"
-            image="https://thumbs.dreamstime.com/b/chalk-drawing-light-bulbs-filling-message-work-progress-four-slowly-171456439.jpg"
+            image={kaching}
           />
           <CardContent sx={{ height: "125px", backgroundColor: "#d9d9d9" }}>
             <Typography gutterBottom variant="h6" component="div">
-              Upcoming...
+              Kaching - Personal Finance Web App
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Currently planning in progress <br />
-              Follow github link to check on progress <br /> <br /> Techs:
-              React, Express.js, SQL
+              To track monthly expenses and budgets
+              <br /> <br /> Techs: React.js, Node.js, Express.js, PostgreSQL
             </Typography>
           </CardContent>
           <CardActions sx={{ backgroundColor: "#d9d9d9" }}>
-            <IconButton disabled>
-              <GitHubIcon />
+            <IconButton>
+              <GitHubIcon
+                onClick={() =>
+                  window.open(
+                    "https://github.com/shawn-goh24/kaching-frontend",
+                    "_blank"
+                  )
+                }
+              />
+            </IconButton>
+            <IconButton>
+              <LaunchIcon
+                onClick={() =>
+                  window.open("https://kaching-frontend.vercel.app/", "_blank")
+                }
+              />
             </IconButton>
           </CardActions>
         </Card>
