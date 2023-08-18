@@ -88,16 +88,13 @@ export const projectsData = [
     description:
       "A web based calendar sharing application that facilities collaborative scheduling with friends and family.",
     tags: [
-      "React",
       "Next.js",
       "Tailwind",
       "ChakraUI",
       "Node.js",
       "Express.js",
-      "PostgreSQL",
-      "Auth0",
+      "Postgres",
       "Google Calendar API",
-      "Google Auth2.0",
     ],
     imageUrl: syncalImg,
   },
