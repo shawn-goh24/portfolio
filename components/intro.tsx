@@ -16,12 +16,13 @@ export default function Intro() {
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.1 }}
       >
-        <div className="text-2xl md:text-5xl 2xl:text-7xl mb-4">
+        <h1 className="text-2xl md:text-5xl 2xl:text-7xl mb-4">
           HEY! <span className="font-bold">I'm Shawn</span>, A <br />
           <span className="font-bold">FULL-STACK DEVELOPER</span> <br />
           BASED IN <span className="font-bold">SINGAPORE</span>
-        </div>
+        </h1>
         <div className="text-gray-500 mb-8 items-center flex flex-col xl:items-start ">
           <p>
             Passionate about coding. I have been programming websites for about
@@ -62,6 +63,7 @@ export default function Intro() {
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.1 }}
       >
         <Image
           src={me}
