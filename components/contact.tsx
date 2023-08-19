@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitButton from "./ui/submitButton";
 import { useToast } from "@/components/ui/use-toast";
-import { Button } from "./ui/button";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -41,16 +40,17 @@ export default function Contact() {
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
           if (error) {
-            // toast({
-            //   variant: "destructive",
-            //   title: "Uh oh! Something went wrong.",
-            //   description: error,
-            // });
-            alert(error);
+            toast({
+              variant: "destructive",
+              title: "Uh oh! Something went wrong.",
+              description: error,
+            });
             return;
           }
-
-          alert("Email sent successfully");
+          toast({
+            title: "Success!",
+            description: "Email sent successfully.",
+          });
         }}
       >
         <input
@@ -70,16 +70,6 @@ export default function Contact() {
         />
         <SubmitButton />
       </form>
-      {/* <Button
-        variant="outline"
-        onClick={() => {
-          toast({
-            description: "Your message has been sent.",
-          });
-        }}
-      >
-        Show Toast
-      </Button> */}
     </motion.section>
   );
 }
