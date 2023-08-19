@@ -32,7 +32,7 @@ export default function Intro() {
           <span className="font-bold">FULL-STACK DEVELOPER</span> <br />
           BASED IN <span className="font-bold">SINGAPORE</span>
         </h1>
-        <div className="text-gray-500 mb-8 items-center flex flex-col xl:items-start ">
+        <div className="text-gray-500 mb-8 items-center flex flex-col xl:items-start dark:text-gray-300">
           <p>
             Passionate about coding. I have been programming websites for about
             1 year.
@@ -46,7 +46,7 @@ export default function Intro() {
         <div className="flex space-x-6 w-full justify-center xl:justify-start">
           <Link href="#contact">
             <Button
-              className="rounded-full"
+              className="rounded-full dark:bg-gray-800 dark:bg-black/60 dark:text-white/80"
               onClick={() => {
                 setActiveSection("Contact");
                 setTimeOfLastClick(Date.now());
@@ -60,7 +60,7 @@ export default function Intro() {
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full bg-transparent"
+                className="rounded-full bg-transparent dark:bg-white/10 dark:text-white/60"
               >
                 <BiLogoGithub />
               </Button>
@@ -69,7 +69,7 @@ export default function Intro() {
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full bg-transparent"
+                className="rounded-full bg-transparent dark:bg-white/10 dark:text-white/60"
               >
                 <FaLinkedinIn />
               </Button>

@@ -6,10 +6,9 @@ import { links } from "@/lib/data";
 import Link from "next/link";
 import logo from "@/app/favicon.ico";
 import Image from "next/image";
-import { Button } from "./ui/button";
-import { MdOutlineDarkMode } from "react-icons/md";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/activeSectionContext";
+import ThemeSwitch from "./themeSwitch";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -18,7 +17,10 @@ export default function Header() {
   return (
     <header className="z-[999] relative">
       <motion.div
-        className="flex items-center fixed top-0 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-black/[0.03] backdrop-blur-[0.5rem]"
+        className="flex items-center fixed top-0 h-[4.5rem] w-full rounded-none 
+        border border-white border-opacity-40 bg-white bg-opacity-80 shadow-black/[0.03] backdrop-blur-[0.5rem]
+        dark:bg-gray-900 dark:bg-opacity-80 dark:border-black dark:border-opacity-40
+        "
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
@@ -38,9 +40,10 @@ export default function Header() {
               >
                 <Link
                   className={clsx(
-                    "flex w-full items-center justify-center px-3 hover:text-gray-950 transition",
+                    "flex w-full items-center justify-center px-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
                     {
-                      "text-gray-950": activeSection === link.name,
+                      "text-gray-950 dark:text-gray-300":
+                        activeSection === link.name,
                     }
                   )}
                   href={link.hash}
@@ -52,7 +55,7 @@ export default function Header() {
                   {link.name}
                   {link.name === activeSection && (
                     <motion.span
-                      className="bg-gray-200 rounded-full absolute -inset-[0.225rem] -z-10 h-8 sm:-inset-[0.425rem]"
+                      className="bg-gray-200 rounded-full absolute -inset-[0.225rem] -z-10 h-8 sm:-inset-[0.425rem] dark:bg-gray-700"
                       layoutId="activeSection"
                       transition={{
                         type: "spring",
@@ -66,13 +69,9 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-        <Button
-          variant="outline"
-          size="icon"
-          className="fixed right-[1.5rem] top-[1rem] justify-center items-center hidden sm:flex rounded-full"
-        >
-          <MdOutlineDarkMode />
-        </Button>
+        <div className="sm:flex hidden">
+          <ThemeSwitch />
+        </div>
       </motion.div>
     </header>
   );
