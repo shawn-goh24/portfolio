@@ -1,9 +1,18 @@
+"use client";
+
 import React from "react";
 import SectionHeading from "./ui/sectionHeading";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
+  const { ref } = useSectionInView("About");
+
   return (
-    <section className="text-center mb-28 max-w-[45rem] leading-8 sm:mb-40">
+    <section
+      ref={ref}
+      id="about"
+      className="text-center mb-28 max-w-[45rem] leading-8 sm:mb-40 scroll-mt-28"
+    >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
         After graduating with a degree in{" "}

@@ -9,10 +9,17 @@ import Image from "next/image";
 import me from "@/public/me.svg";
 import { motion } from "framer-motion";
 import { socialMediaLinks, skills } from "@/lib/data";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Intro() {
+  const { ref } = useSectionInView("Home", 0.75);
+
   return (
-    <section className="relative flex flex-col-reverse items-center justify-center text-center space-x-16 gap-8 h-screen xl:flex-row xl:text-left">
+    <section
+      ref={ref}
+      id="home"
+      className="relative flex flex-col-reverse items-center justify-center text-center space-x-16 gap-8 h-screen xl:flex-row xl:text-left mb-4"
+    >
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -30,7 +37,7 @@ export default function Intro() {
           </p>
           <div className="flex space-x-3 [&>*]:w-8 mt-2">
             {skills.map((skill) => (
-              <Image src={skill.image} alt={skill.name} />
+              <Image key={skill.name} src={skill.image} alt={skill.name} />
             ))}
           </div>
         </div>
