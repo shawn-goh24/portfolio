@@ -10,9 +10,11 @@ import me from "@/public/me.svg";
 import { motion } from "framer-motion";
 import { socialMediaLinks, skills } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/activeSectionContext";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.75);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
@@ -43,7 +45,15 @@ export default function Intro() {
         </div>
         <div className="flex space-x-6 w-full justify-center xl:justify-start">
           <Link href="#contact">
-            <Button className="rounded-full">Contact me</Button>
+            <Button
+              className="rounded-full"
+              onClick={() => {
+                setActiveSection("Contact");
+                setTimeOfLastClick(Date.now());
+              }}
+            >
+              Contact me
+            </Button>
           </Link>
           <div className="space-x-2">
             <Link href={socialMediaLinks.github} target="_blank">
