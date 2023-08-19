@@ -63,7 +63,7 @@ export const experiencesData = [
     location: "Singapore, Remote",
     description:
       "I graduated after 8 months of studying. Now looking for new opportunites in the SWE role. My stack includes React, Next.js, Tailwind, Node.js, PostgreSQL.",
-    icon: React.createElement(FaReact),
+    icon: React.createElement(LuGraduationCap),
     date: "2022 - 2023",
   },
 ] as const;
