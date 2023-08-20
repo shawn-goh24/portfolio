@@ -20,7 +20,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="relative flex flex-col-reverse items-center justify-center text-center space-x-16 gap-8 h-screen xl:flex-row xl:text-left mb-4"
+      className="relative flex flex-col-reverse items-center justify-center text-center sm:space-x-16 gap-8 h-screen xl:flex-row xl:text-left mb-4 mt-20 sm:mt-0"
     >
       <motion.div
         initial={{ y: 100, opacity: 0 }}
@@ -32,12 +32,13 @@ export default function Intro() {
           <span className="font-bold">FULL-STACK DEVELOPER</span> <br />
           BASED IN <span className="font-bold">SINGAPORE</span>
         </h1>
-        <div className="text-gray-500 mb-8 items-center flex flex-col xl:items-start dark:text-gray-300">
-          <p>
+        <div className="text-gray-500 mb-8 items-center flex flex-col flex-wrap w-full sm:w-[600px] xl:items-start dark:text-gray-300">
+          <p className="text-sm sm:text-base">
             Passionate about coding. I have been programming websites for about
-            1 year.
+            1 year. Currently open to new opportunities in the tech industry or
+            SWE position.
           </p>
-          <div className="flex space-x-3 [&>*]:w-8 mt-2">
+          <div className="flex space-x-3 [&>*]:w-8 mt-2 flex-wrap justify-center">
             {skills.map((skill) => (
               <Image key={skill.name} src={skill.image} alt={skill.name} />
             ))}

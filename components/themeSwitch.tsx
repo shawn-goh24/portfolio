@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useContext } from "react";
+import React from "react";
 import { Button } from "./ui/button";
 import { BsMoon, BsSun } from "react-icons/bs";
-import ThemeContextProvider, { useTheme } from "@/context/themeContext";
+import { useTheme } from "@/context/themeContext";
 
 export default function ThemeSwitch() {
   const { theme, toggleTheme } = useTheme();
