@@ -28,7 +28,7 @@ export default function Intro() {
         transition={{ delay: 0.1 }}
       >
         <h1 className="text-2xl md:text-5xl 2xl:text-6xl mb-4">
-          HEY! <span className="font-bold">I'm Shawn</span>, A <br />
+          HEY! <span className="font-bold">I&apos;m Shawn</span>, A <br />
           <span className="font-bold">FULL-STACK DEVELOPER</span> <br />
           BASED IN <span className="font-bold">SINGAPORE</span>
         </h1>

@@ -33,9 +33,9 @@ export default function About() {
       </p>
 
       <p>
-        <span className="italic">When I'm not coding</span>, I enjoy watching
-        football and F1. Probably also going out with friends for a pint of beer
-        to wind down
+        <span className="italic">When I&apos;m not coding</span>, I enjoy
+        watching football and F1. Probably also going out with friends for a
+        pint of beer to wind down
       </p>
     </section>
   );
